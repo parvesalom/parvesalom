@@ -424,5 +424,31 @@ Awesome work I give him my all work he done very fast if anyone want to job anyo
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
 
+	<script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault(); // This prevents the right-click context menu from appearing
+    });
+
+    document.addEventListener('keydown', function(e) {
+        // This captures key combinations such as Ctrl+U (view source) and Ctrl+Shift+I (inspect element)
+        if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 'i' || e.key === 'I')) {
+            e.preventDefault(); // This disables the default action for these key combinations
+        }
+    });
+</script>
+
+	<script>
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // Prevent text selection
+    document.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+    });
+</script>
+
+
 </body>
 </html>
